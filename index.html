@@ -13,8 +13,7 @@
     color: #f8f8f2; /* Adjust text color for readability */
     font-family: 'Georgia', serif;
   }
-</style>
-   body::before {
+    body::before {
     content: "";
     position: fixed;
     top: 0;
@@ -31,17 +30,12 @@
   }
 
   @keyframes fogShift {
-    0% {
-      transform: translate(0, 0) rotate(0deg);
-    }
-    50% {
-      transform: translate(-25%, -10%) rotate(180deg);
-    }
-    100% {
-      transform: translate(0, 0) rotate(360deg);
-    }
+    0% { transform: translate(0, 0) rotate(0deg); }
+    50% { transform: translate(-25%, -10%) rotate(180deg); }
+    100% { transform: translate(0, 0) rotate(360deg); }
   }
- 
+</style>
+   
 </style>
  
   <body>
