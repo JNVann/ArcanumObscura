@@ -35,18 +35,31 @@
         backdrop-filter: blur(2px);
       }
 
-      /* ⭐ Bigger Cinematic Header */
+      /* ⭐ Upgraded Cinematic Header */
       h1 {
-        font-size: 4.8rem;
-        letter-spacing: 4px;
+        font-size: 6.2rem;
+        letter-spacing: 5px;
         text-transform: uppercase;
         margin-bottom: 10px;
-        color: #e8e6d8;
 
+        /* Metallic teal gradient */
+        background: linear-gradient(
+          to bottom,
+          #e8ffff 0%,
+          #b8faff 35%,
+          #7ad0d8 65%,
+          #d0f8ff 100%
+        );
+        -webkit-background-clip: text;
+        color: transparent;
+
+        /* Arcane glow + rimlight + depth */
         text-shadow:
-          0 0 12px rgba(0, 255, 255, 0.35),
-          0 0 22px rgba(0, 255, 255, 0.25),
-          3px 3px 6px rgba(60, 40, 20, 0.7);
+          0 0 22px rgba(0, 255, 255, 0.55),
+          0 0 42px rgba(0, 255, 255, 0.35),
+          0 0 60px rgba(0, 255, 255, 0.25),
+          3px 3px 8px rgba(0, 0, 0, 0.7),
+          -2px -2px 4px rgba(255, 255, 255, 0.15);
       }
 
       /* ⭐ Tagline Styling */
