@@ -32,16 +32,58 @@
         font-size: 3.2rem;
         letter-spacing: 3px;
         text-transform: uppercase;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         color: #e8e6d8;
-
-        /* Arcane teal glow */
         text-shadow:
           0 0 8px rgba(0, 255, 255, 0.25),
           0 0 16px rgba(0, 255, 255, 0.15),
-
-          /* Brass depth shadow */
           2px 2px 4px rgba(60, 40, 20, 0.6);
+      }
+
+      /* ⭐ Teal Header Divider */
+      .header-divider {
+        width: 180px;
+        height: 3px;
+        margin: 0 auto 30px auto;
+        background: linear-gradient(
+          to right,
+          rgba(0, 255, 255, 0) 0%,
+          rgba(0, 255, 255, 0.7) 50%,
+          rgba(0, 255, 255, 0) 100%
+        );
+        box-shadow: 0 0 12px rgba(0, 255, 255, 0.4);
+        border-radius: 2px;
+      }
+
+      /* ⭐ Glowing Button Styling */
+      .glow-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 22px;
+        margin: 10px 0;
+        background: rgba(0, 40, 40, 0.6);
+        border: 1px solid rgba(0, 255, 255, 0.4);
+        border-radius: 6px;
+        color: #9be7ff;
+        font-size: 1.1rem;
+        text-decoration: none;
+        text-shadow: 0 0 6px rgba(0, 255, 255, 0.4);
+        box-shadow: 0 0 12px rgba(0, 255, 255, 0.25);
+        transition: 0.25s ease;
+      }
+
+      .glow-button:hover {
+        background: rgba(0, 60, 60, 0.8);
+        box-shadow: 0 0 18px rgba(0, 255, 255, 0.45);
+        transform: translateY(-2px);
+      }
+
+      /* ⭐ Discord Icon */
+      .discord-icon {
+        width: 22px;
+        height: 22px;
+        filter: drop-shadow(0 0 4px rgba(0, 255, 255, 0.6));
       }
 
       /* Fog layer behind text */
@@ -66,33 +108,28 @@
         50%  { transform: translate(-25%, -10%) rotate(180deg); }
         100% { transform: translate(0, 0) rotate(360deg); }
       }
-
-      a {
-        color: #9be7ff;
-        text-decoration: none;
-      }
-
-      a:hover {
-        text-decoration: underline;
-      }
     </style>
   </head>
 
   <body>
     <div class="content">
       <h1>Arcanum Obscura</h1>
+      <div class="header-divider"></div>
 
       <h2>The Everdream — Now Live</h2>
-      <p><a href="YOUR_BOOK_2_LINK">Read Book 2</a></p>
+      <a class="glow-button" href="YOUR_BOOK_2_LINK">Read Book 2</a>
 
       <h2>Start the Series</h2>
-      <p><a href="YOUR_BOOK_1_LINK">Read Book 1</a></p>
+      <a class="glow-button" href="https://www.amazon.com/dp/B0FH1D5DXN">Read Book 1</a>
 
       <h2>About the Author</h2>
       <p>Fantasy author. Worldbuilder. Mythic architect. Creator of the Arcanum Obscura series.</p>
 
-      <h2>Newsletter</h2>
-      <p><a href="YOUR_NEWSLETTER_LINK">Join the list for updates and early reveals.</a></p>
+      <h2>Join the Discord</h2>
+      <a class="glow-button" href="https://discord.gg/BXTTQbMJ">
+        <img class="discord-icon" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f5e3.svg" alt="Discord">
+        Enter the community
+      </a>
 
       <h2>Links</h2>
       <p><a href="/links.html">All Links</a></p>
