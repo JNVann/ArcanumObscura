@@ -13,9 +13,21 @@
         font-family: 'Georgia', serif;
         position: relative;
         z-index: 0;
+        margin: 0;
+        padding: 0;
       }
 
-      /* Fog layer BEHIND the text */
+      /* Centered content container */
+      .content {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+      }
+
+      /* Fog layer behind text */
       body::before {
         content: "";
         position: fixed;
@@ -27,7 +39,7 @@
                     radial-gradient(circle at bottom right, rgba(255,255,255,0.05), transparent 60%);
         animation: fogShift 60s linear infinite;
         pointer-events: none;
-        z-index: -1; /* Moves fog behind text */
+        z-index: -1;
         filter: blur(30px);
         opacity: 0.4;
       }
@@ -38,30 +50,35 @@
         100% { transform: translate(0, 0) rotate(360deg); }
       }
 
-      /* Ensures all text sits above fog */
-      h1, h2, p, a {
-        position: relative;
-        z-index: 2;
+      a {
+        color: #9be7ff;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
       }
     </style>
   </head>
 
   <body>
-    <h1>Arcanum Obscura</h1>
+    <div class="content">
+      <h1>Arcanum Obscura</h1>
 
-    <h2>The Everdream — Now Live</h2>
-    <p><a href="YOUR_BOOK_2_LINK">Read Book 2</a></p>
+      <h2>The Everdream — Now Live</h2>
+      <p><a href="YOUR_BOOK_2_LINK">Read Book 2</a></p>
 
-    <h2>Start the Series</h2>
-    <p><a href="YOUR_BOOK_1_LINK">Read Book 1</a></p>
+      <h2>Start the Series</h2>
+      <p><a href="YOUR_BOOK_1_LINK">Read Book 1</a></p>
 
-    <h2>About the Author</h2>
-    <p>Fantasy author. Worldbuilder. Mythic architect. Creator of the Arcanum Obscura series.</p>
+      <h2>About the Author</h2>
+      <p>Fantasy author. Worldbuilder. Mythic architect. Creator of the Arcanum Obscura series.</p>
 
-    <h2>Newsletter</h2>
-    <p><a href="YOUR_NEWSLETTER_LINK">Join the list for updates and early reveals.</a></p>
+      <h2>Newsletter</h2>
+      <p><a href="YOUR_NEWSLETTER_LINK">Join the list for updates and early reveals.</a></p>
 
-    <h2>Links</h2>
-    <p><a href="/links.html">All Links</a></p>
+      <h2>Links</h2>
+      <p><a href="/links.html">All Links</a></p>
+    </div>
   </body>
 </html>
