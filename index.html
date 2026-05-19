@@ -17,7 +17,7 @@
         padding: 0;
       }
 
-      /* Centered content container */
+      /* Centered content container with glowing border */
       .content {
         max-width: 700px;
         margin: 0 auto;
@@ -25,26 +25,47 @@
         text-align: center;
         position: relative;
         z-index: 2;
+
+        border: 1px solid rgba(0, 255, 255, 0.35);
+        border-radius: 12px;
+        box-shadow:
+          0 0 12px rgba(0, 255, 255, 0.25),
+          0 0 24px rgba(0, 255, 255, 0.15),
+          inset 0 0 12px rgba(0, 255, 255, 0.15);
+        backdrop-filter: blur(2px);
       }
 
-      /* ⭐ Cinematic Header Styling */
+      /* ⭐ Bigger Cinematic Header */
       h1 {
-        font-size: 3.2rem;
-        letter-spacing: 3px;
+        font-size: 4.8rem;
+        letter-spacing: 4px;
         text-transform: uppercase;
         margin-bottom: 10px;
         color: #e8e6d8;
+
         text-shadow:
-          0 0 8px rgba(0, 255, 255, 0.25),
-          0 0 16px rgba(0, 255, 255, 0.15),
-          2px 2px 4px rgba(60, 40, 20, 0.6);
+          0 0 12px rgba(0, 255, 255, 0.35),
+          0 0 22px rgba(0, 255, 255, 0.25),
+          3px 3px 6px rgba(60, 40, 20, 0.7);
       }
 
-      /* ⭐ Teal Header Divider */
+      /* ⭐ Tagline Styling */
+      .tagline {
+        font-size: 1.3rem;
+        letter-spacing: 1px;
+        margin-top: -5px;
+        margin-bottom: 30px;
+        color: #cfeff5;
+        opacity: 0.9;
+        text-shadow:
+          0 0 6px rgba(0, 255, 255, 0.25),
+          0 0 12px rgba(0, 255, 255, 0.15);
+      }
+
       .header-divider {
-        width: 180px;
+        width: 220px;
         height: 3px;
-        margin: 0 auto 30px auto;
+        margin: 0 auto 20px auto;
         background: linear-gradient(
           to right,
           rgba(0, 255, 255, 0) 0%,
@@ -55,7 +76,7 @@
         border-radius: 2px;
       }
 
-      /* ⭐ Glowing Button Styling */
+      /* ⭐ Glowing Buttons */
       .glow-button {
         display: inline-flex;
         align-items: center;
@@ -79,14 +100,25 @@
         transform: translateY(-2px);
       }
 
-      /* ⭐ Discord Icon */
       .discord-icon {
         width: 22px;
         height: 22px;
         filter: drop-shadow(0 0 4px rgba(0, 255, 255, 0.6));
       }
 
-      /* Fog layer behind text */
+      /* ⭐ Footer Bar */
+      footer {
+        margin-top: 60px;
+        padding: 20px 0;
+        text-align: center;
+        font-size: 0.9rem;
+        color: #b8dfe8;
+        opacity: 0.8;
+        border-top: 1px solid rgba(0, 255, 255, 0.3);
+        box-shadow: 0 -4px 12px rgba(0, 255, 255, 0.15);
+      }
+
+      /* Fog */
       body::before {
         content: "";
         position: fixed;
@@ -116,6 +148,9 @@
       <h1>Arcanum Obscura</h1>
       <div class="header-divider"></div>
 
+      <!-- ⭐ New Tagline -->
+      <p class="tagline">A World of Brass, Fog, and Magefire</p>
+
       <h2>The Everdream — Now Live</h2>
       <a class="glow-button" href="YOUR_BOOK_2_LINK">Read Book 2</a>
 
@@ -134,5 +169,9 @@
       <h2>Links</h2>
       <p><a href="/links.html">All Links</a></p>
     </div>
+
+    <footer>
+      © 2026 Joey — Arcanum Obscura
+    </footer>
   </body>
 </html>
