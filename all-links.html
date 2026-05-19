@@ -97,6 +97,22 @@
         transform: translateY(-2px);
       }
 
+      /* Disabled Twitter placeholder */
+      .disabled-button {
+        display: block;
+        width: 80%;
+        margin: 12px auto;
+        padding: 14px 22px;
+        background: rgba(0, 40, 40, 0.3);
+        border: 1px solid rgba(0, 255, 255, 0.2);
+        border-radius: 6px;
+        color: #7aa8b5;
+        font-size: 1.2rem;
+        text-decoration: none;
+        opacity: 0.5;
+        pointer-events: none;
+      }
+
       /* Discord icon */
       .discord-icon {
         width: 22px;
@@ -149,25 +165,28 @@
       <div class="header-divider"></div>
       <p class="tagline">A World of Brass, Fog, and Magefire</p>
 
-      <!-- Links -->
+      <!-- Navigation + Books -->
       <a class="glow-button" href="/">🏠 Return to Homepage</a>
-
       <a class="glow-button" href="https://www.amazon.com/dp/B0FH1D5DXN">📘 Read Book 1</a>
+      <a class="glow-button" href="YOUR_BOOK_2_LINK">📗 Read Book 2</a>
 
-      <a class="glow-button" href="YOUR_BOOK_2_LINK">📗 Read Book 2 (Coming Soon)</a>
+      <!-- Author + Socials -->
+      <a class="glow-button" href="https://www.amazon.com/stores/J.N-Vann/author/B0FHQM4XS8">🖋️ Amazon Author Page</a>
+      <a class="glow-button" href="https://www.instagram.com/arcanumobscuraclockwork">📸 Instagram</a>
+      <a class="disabled-button">🐦 Twitter (coming soon)</a>
 
+      <!-- Discord -->
       <a class="glow-button" href="https://discord.gg/BXTTQbMJ">
         <img class="discord-icon" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f5e3.svg">
         Join the Discord
       </a>
 
-      <a class="glow-button" href="https://www.amazon.com/stores/author/B0CGLY2Q7F">🖋️ Amazon Author Page</a>
-
+      <!-- Contact -->
       <a class="glow-button" href="mailto:YOUR_EMAIL_HERE">✉️ Contact</a>
     </div>
 
     <footer>
-      © 2026 Joey — Arcanum Obscura
+      © 2026 J.N. Vann — Arcanum Obscura
     </footer>
   </body>
 </html>
