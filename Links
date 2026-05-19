@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Links | Arcanum Obscura</title>
+    <style>
+      body {
+        background-color: #0d0d0d;
+        color: #f8f8f2;
+        font-family: 'Georgia', serif;
+        text-align: center;
+        padding: 40px;
+      }
+
+      a {
+        display: block;
+        margin: 20px auto;
+        padding: 15px 25px;
+        width: 80%;
+        max-width: 400px;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 8px;
+        color: #f8f8f2;
+        text-decoration: none;
+        font-size: 20px;
+        transition: 0.3s;
+      }
+
+      a:hover {
+        background: rgba(255, 255, 255, 0.18);
+      }
+
+      h1 {
+        margin-bottom: 40px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Arcanum Obscura Links</h1>
+
+    <a href="YOUR_BOOK_2_LINK">Read The Everdream — Book 2</a>
+    <a href="YOUR_BOOK_1_LINK">Start the Series — Book 1</a>
+    <a href="YOUR_NEWSLETTER_LINK">Join the Newsletter</a>
+    <a href="YOUR_WEBSITE_HOME">Author Website Home</a>
+    <a href="YOUR_AMAZON_AUTHOR_PAGE">Follow on Amazon</a>
+  </body>
+</html>
