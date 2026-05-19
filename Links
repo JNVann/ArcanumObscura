@@ -1,48 +1,173 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Links | Arcanum Obscura</title>
+    <title>Arcanum Obscura — Links</title>
     <style>
       body {
-        background-color: #0d0d0d;
+        background-image: url('Insta1.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
         color: #f8f8f2;
         font-family: 'Georgia', serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Centered content container with glowing border */
+      .content {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 40px 20px;
         text-align: center;
-        padding: 40px;
+        position: relative;
+        z-index: 2;
+
+        border: 1px solid rgba(0, 255, 255, 0.35);
+        border-radius: 12px;
+        box-shadow:
+          0 0 12px rgba(0, 255, 255, 0.25),
+          0 0 24px rgba(0, 255, 255, 0.15),
+          inset 0 0 12px rgba(0, 255, 255, 0.15);
+        backdrop-filter: blur(2px);
       }
 
-      a {
-        display: block;
-        margin: 20px auto;
-        padding: 15px 25px;
-        width: 80%;
-        max-width: 400px;
-        background: rgba(255, 255, 255, 0.08);
-        border: 1px solid rgba(255, 255, 255, 0.15);
-        border-radius: 8px;
-        color: #f8f8f2;
-        text-decoration: none;
-        font-size: 20px;
-        transition: 0.3s;
-      }
-
-      a:hover {
-        background: rgba(255, 255, 255, 0.18);
-      }
-
+      /* Giant cinematic header */
       h1 {
-        margin-bottom: 40px;
+        font-size: 4.8rem;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        color: #e8e6d8;
+        text-shadow:
+          0 0 12px rgba(0, 255, 255, 0.35),
+          0 0 22px rgba(0, 255, 255, 0.25),
+          3px 3px 6px rgba(60, 40, 20, 0.7);
+      }
+
+      /* Tagline */
+      .tagline {
+        font-size: 1.3rem;
+        letter-spacing: 1px;
+        margin-top: -5px;
+        margin-bottom: 30px;
+        color: #cfeff5;
+        opacity: 0.9;
+        text-shadow:
+          0 0 6px rgba(0, 255, 255, 0.25),
+          0 0 12px rgba(0, 255, 255, 0.15);
+      }
+
+      /* Divider */
+      .header-divider {
+        width: 220px;
+        height: 3px;
+        margin: 0 auto 20px auto;
+        background: linear-gradient(
+          to right,
+          rgba(0, 255, 255, 0) 0%,
+          rgba(0, 255, 255, 0.7) 50%,
+          rgba(0, 255, 255, 0) 100%
+        );
+        box-shadow: 0 0 12px rgba(0, 255, 255, 0.4);
+        border-radius: 2px;
+      }
+
+      /* Glowing buttons */
+      .glow-button {
+        display: block;
+        width: 80%;
+        margin: 12px auto;
+        padding: 14px 22px;
+        background: rgba(0, 40, 40, 0.6);
+        border: 1px solid rgba(0, 255, 255, 0.4);
+        border-radius: 6px;
+        color: #9be7ff;
+        font-size: 1.2rem;
+        text-decoration: none;
+        text-shadow: 0 0 6px rgba(0, 255, 255, 0.4);
+        box-shadow: 0 0 12px rgba(0, 255, 255, 0.25);
+        transition: 0.25s ease;
+      }
+
+      .glow-button:hover {
+        background: rgba(0, 60, 60, 0.8);
+        box-shadow: 0 0 18px rgba(0, 255, 255, 0.45);
+        transform: translateY(-2px);
+      }
+
+      /* Discord icon */
+      .discord-icon {
+        width: 22px;
+        height: 22px;
+        vertical-align: middle;
+        margin-right: 8px;
+        filter: drop-shadow(0 0 4px rgba(0, 255, 255, 0.6));
+      }
+
+      /* Footer */
+      footer {
+        margin-top: 60px;
+        padding: 20px 0;
+        text-align: center;
+        font-size: 0.9rem;
+        color: #b8dfe8;
+        opacity: 0.8;
+        border-top: 1px solid rgba(0, 255, 255, 0.3);
+        box-shadow: 0 -4px 12px rgba(0, 255, 255, 0.15);
+      }
+
+      /* Fog */
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle at top left, rgba(255,255,255,0.05), transparent 60%),
+                    radial-gradient(circle at bottom right, rgba(255,255,255,0.05), transparent 60%);
+        animation: fogShift 60s linear infinite;
+        pointer-events: none;
+        z-index: -1;
+        filter: blur(30px);
+        opacity: 0.4;
+      }
+
+      @keyframes fogShift {
+        0%   { transform: translate(0, 0) rotate(0deg); }
+        50%  { transform: translate(-25%, -10%) rotate(180deg); }
+        100% { transform: translate(0, 0) rotate(360deg); }
       }
     </style>
   </head>
 
   <body>
-    <h1>Arcanum Obscura Links</h1>
+    <div class="content">
+      <h1>Arcanum Obscura</h1>
+      <div class="header-divider"></div>
+      <p class="tagline">A World of Brass, Fog, and Magefire</p>
 
-    <a href="YOUR_BOOK_2_LINK">Read The Everdream — Book 2</a>
-    <a href="YOUR_BOOK_1_LINK">Start the Series — Book 1</a>
-    <a href="YOUR_NEWSLETTER_LINK">Join the Newsletter</a>
-    <a href="YOUR_WEBSITE_HOME">Author Website Home</a>
-    <a href="YOUR_AMAZON_AUTHOR_PAGE">Follow on Amazon</a>
+      <!-- Links -->
+      <a class="glow-button" href="/">🏠 Return to Homepage</a>
+
+      <a class="glow-button" href="https://www.amazon.com/dp/B0FH1D5DXN">📘 Read Book 1</a>
+
+      <a class="glow-button" href="YOUR_BOOK_2_LINK">📗 Read Book 2 (Coming Soon)</a>
+
+      <a class="glow-button" href="https://discord.gg/BXTTQbMJ">
+        <img class="discord-icon" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f5e3.svg">
+        Join the Discord
+      </a>
+
+      <a class="glow-button" href="https://www.amazon.com/stores/author/B0CGLY2Q7F">🖋️ Amazon Author Page</a>
+
+      <a class="glow-button" href="mailto:YOUR_EMAIL_HERE">✉️ Contact</a>
+    </div>
+
+    <footer>
+      © 2026 Joey — Arcanum Obscura
+    </footer>
   </body>
 </html>
